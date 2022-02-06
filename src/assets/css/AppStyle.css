@@ -1,0 +1,12 @@
+.success{
+    color: rgb(177, 83, 83);
+    background-color: aqua;
+    margin: 10px;
+}
+
+.hello{
+    color: rgba(2, 12, 12, 0.932);
+    background-color: rgb(31, 172, 106);
+    margin: 10px;
+}
+
