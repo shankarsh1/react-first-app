@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useMemo } from "react";
 import { Validator } from "react";
 const ContactForm = () => {
     const [contact, setContact] = useState({
@@ -47,6 +47,11 @@ const ContactForm = () => {
         event.preventDefault();
         console.log(contact);
     };
+
+    useMemo(submitHandlerContactForm=>{
+
+    }, [submitHandlerContactForm])
+
     return (
         <React.Fragment>
             <form className="form" onSubmit={submitHandlerContactForm}>

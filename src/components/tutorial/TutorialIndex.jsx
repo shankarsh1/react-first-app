@@ -6,6 +6,7 @@ import UseStateObject from "../tutorial/1-useState/setup/4-useState-object";
 import UseStateCounter from "../tutorial/1-useState/setup/5-useState-counter";
 import ContactClassForm from "./ContactClassForm";
 import ContactForm from "./ContactForm";
+import Layout from "./Layout";
 import LoadBackground from "./LoadBackground";
 import Toggle from "./Toggle";
 function TutorialIndex() {
@@ -21,9 +22,10 @@ function TutorialIndex() {
 
 
                 {/* <Toggle/> */}
-                {/* <ContactForm /> */}
+                <ContactForm />
                 {/* <ContactClassForm /> */}
-                <LoadBackground />
+                {/* <LoadBackground /> */}
+                {/* <Layout/> */}
             </div>
         </React.Fragment>
     );

@@ -1,6 +1,5 @@
 import React from "react";
 import "./App.css";
-import "bootstrap-4-required/src/index.js";
 import Header from "./components/partials/Header";
 import Footer from "./components/partials/Footer";
 import MainContent from "./components/partials/MainContent";

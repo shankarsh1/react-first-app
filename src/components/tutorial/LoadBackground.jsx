@@ -1,5 +1,6 @@
 import React from "react";
-
+import '../../assets/css/AppStyle.css';
+import style from '../../assets/css/custom.module.css';
 function LoadBackground() {
     const [isLoading, setIsLoading] = React.useState(true);
     const [data, setData] = React.useState([]);
@@ -17,18 +18,17 @@ function LoadBackground() {
         if (data.length !== 0) {
             setIsLoading(false);
         }
-        console.log(data);
     }, [data]);
 
     return (
         <React.Fragment>
             <div className="row col-md-12">
-                <p>counter: {counter}</p>
+                <p className={style.success}>counter: {counter}</p>
                 <button className="btn btn-info" onClick={() => setCounter(count + 1)}>
                     counter update
                 </button>
 
-                <p>cout: {count}</p>
+                <p className="hello">count: {count}</p>
                 <button className="btn btn-info" onClick={() => setCount(count + 1)}>
                     count update
                 </button>
