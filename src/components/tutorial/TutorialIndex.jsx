@@ -23,7 +23,7 @@ function TutorialIndex() {
 
         {/* <Toggle/> */}
         {/*  <ContactForm /> */}
-        {/* <ContactClassForm /> */}
+        <ContactClassForm />
         {/* <LoadBackground /> */}
         {/* <Layout/> */}
         <HigherOrder />

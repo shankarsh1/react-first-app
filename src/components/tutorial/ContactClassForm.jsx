@@ -10,7 +10,7 @@ export class ContactClassForm extends Component {
     /* this.state = { enteredTitle: "" };
     this.state = { enteredAmount: "" };
     this.state = { enteredDate: "" }; */
-    console.log('constructor1');
+    console.log("constructor1");
   }
   titleChangeHandler(event) {
     this.setState({ title: event.target.value });
@@ -35,12 +35,16 @@ export class ContactClassForm extends Component {
   };
 
   componentDidMount() {
-    console.log('componentDidMount3');
+    console.log("componentDidMount3");
     this.setState({ flagcounter: 1 });
   }
 
   componentDidUpdate(prevProps, prevState, snapshot) {
-    console.log('componentDidUpdate4', `prevProps: ${prevProps} ,prevState: ${prevState.flagcounter}, snapshot: ${snapshot}`, this.state.title);
+    console.log(
+      "componentDidUpdate4",
+      `prevProps: ${prevProps} ,prevState: ${prevState.flagcounter}, snapshot: ${snapshot}`,
+      this.state.title
+    );
   }
 
   shouldComponentUpdate() {
@@ -51,19 +55,25 @@ export class ContactClassForm extends Component {
 
   render() {
     //this.setState({ title: 'UMA' })
-    console.log('render2');
+    console.log("render2");
     return (
       <React.Fragment>
         <div className="container">
           <div className="row">
             <p>{this.state.flagcounter}</p>
-            <button className="btn btn-info" onClick={() => this.setState({ flagcounter: this.state.flagcounter + 1 })}>update counter</button>
-
-          </div><ToggleClass />
+            <button
+              className="btn btn-info"
+              onClick={() =>
+                this.setState({ flagcounter: this.state.flagcounter + 1 })
+              }
+            >
+              update counter
+            </button>
+          </div>
+          <ToggleClass />
         </div>
         <div className="album py-5 bg-light">
           <div className="container">
-
             <div className="row">
               <form onSubmit={this.submitHandler}>
                 <div className="form-row">
