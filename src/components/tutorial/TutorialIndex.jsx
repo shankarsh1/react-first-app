@@ -6,9 +6,14 @@ import UseStateObject from "../tutorial/1-useState/setup/4-useState-object";
 import UseStateCounter from "../tutorial/1-useState/setup/5-useState-counter";
 import ContactClassForm from "./ContactClassForm";
 import ContactForm from "./ContactForm";
+import ErrorBoundary from "./ErrorBoundary";
 import HigherOrder from "./HigherOrder";
 import Layout from "./Layout";
 import LoadBackground from "./LoadBackground";
+import MountingA from "./MountingA";
+import Parent from "./Parent";
+import RandomUser from "./RandomUser";
+import RefComponent from "./RefComponent";
 import Toggle from "./Toggle";
 function TutorialIndex() {
   return (
@@ -23,10 +28,19 @@ function TutorialIndex() {
 
         {/* <Toggle/> */}
         {/*  <ContactForm /> */}
-        <ContactClassForm />
+        {/*  <ContactClassForm /> */}
         {/* <LoadBackground /> */}
         {/* <Layout/> */}
-        <HigherOrder />
+        {/* <HigherOrder /> */}
+        {/*  <MountingA first_name="Uma" /> */}
+        {/* <Parent name="Uma" />
+        <ErrorBoundary>
+          <Parent name="Shankar" />
+        </ErrorBoundary> */}
+        <ErrorBoundary>
+          {/* <RandomUser /> */}
+          <RefComponent />
+        </ErrorBoundary>
       </div>
     </React.Fragment>
   );

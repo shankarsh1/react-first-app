@@ -22,7 +22,7 @@ function App() {
             <Route path="*" element={<PageNotFound />} />
           </Routes>
         </MainContent>
-        <Footer />
+       {/*  <Footer /> */}
       </Router>
     </React.Fragment>
   );
