@@ -12,9 +12,11 @@ import Layout from "./Layout";
 import LoadBackground from "./LoadBackground";
 import MountingA from "./MountingA";
 import Parent from "./Parent";
+import RefParent from "./RefParent";
 import RandomUser from "./RandomUser";
 import RefComponent from "./RefComponent";
 import Toggle from "./Toggle";
+import HocCounter from "./HocCounter";
 function TutorialIndex() {
   return (
     <React.Fragment>
@@ -39,7 +41,9 @@ function TutorialIndex() {
         </ErrorBoundary> */}
         <ErrorBoundary>
           {/* <RandomUser /> */}
-          <RefComponent />
+          {/* <RefComponent /> */}
+          {/* <RefParent /> */}
+          <HocCounter />
         </ErrorBoundary>
       </div>
     </React.Fragment>
