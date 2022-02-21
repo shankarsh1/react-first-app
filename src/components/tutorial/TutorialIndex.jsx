@@ -17,11 +17,15 @@ import RandomUser from "./RandomUser";
 import RefComponent from "./RefComponent";
 import Toggle from "./Toggle";
 import HocCounter from "./HocCounter";
+import ContextA from "./ContextA";
+import { IndexHook } from "./hooks/IndexHook";
 function TutorialIndex() {
   return (
     <React.Fragment>
       <div className="container">
-        <h2>Advanced Tutorial On Final Stage</h2>
+        <h2 style={{ textAlign: "center" }}>
+          Advanced Tutorial On Final Stage
+        </h2>
         {/* <ErrorExample /> */}
         {/* <UseStateBasics /> */}
         {/* <UseStateArray /> */}
@@ -43,7 +47,9 @@ function TutorialIndex() {
           {/* <RandomUser /> */}
           {/* <RefComponent /> */}
           {/* <RefParent /> */}
-          <HocCounter />
+          {/* <HocCounter /> */}
+          {/* <ContextA /> */}
+          <IndexHook />
         </ErrorBoundary>
       </div>
     </React.Fragment>
