@@ -32,7 +32,7 @@ const MemoUse = (props) => {
   } */
 
   const isEven = useMemo(() => {
-    for (let index = 0; index <= 10000; index++) {
+    for (let index = 0; index <= 100000; index++) {
       console.log(index);
     }
     return count % 2 === 0 ? "Even" : "Odd";

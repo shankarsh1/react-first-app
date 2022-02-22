@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useRef } from "react";
 import ErrorBoundary from "../ErrorBoundary";
 import A from "./A";
+import Callback from "./Callback";
+import Imperative from "./Imperative";
 import Index from "./Index";
 import MemoUse from "./MemoUse";
 import ReducerCount from "./ReducerCount";
+import RefUse from "./RefUse";
 
 export const IndexHook = () => {
   return (
@@ -12,9 +15,12 @@ export const IndexHook = () => {
         <h3>Index Hooks</h3>
         <ErrorBoundary>
           {/*  <Index /> */}
-          <ReducerCount />
-          <MemoUse />
-          <A />
+          {/* <ReducerCount />
+          <MemoUse /> */}
+          {/* <Callback /> */}
+          {/* <RefUse /> */}
+          <Imperative />
+          {/* <A /> */}
         </ErrorBoundary>
       </div>
     </>
