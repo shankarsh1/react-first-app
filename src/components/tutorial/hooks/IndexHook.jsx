@@ -4,7 +4,9 @@ import A from "./A";
 import Callback from "./Callback";
 import Imperative from "./Imperative";
 import Index from "./Index";
+import { LoginForm } from "./LoginForm";
 import MemoUse from "./MemoUse";
+import { PostForm } from "./PostForm";
 import ReducerCount from "./ReducerCount";
 import RefUse from "./RefUse";
 
@@ -19,7 +21,9 @@ export const IndexHook = () => {
           <MemoUse /> */}
           {/* <Callback /> */}
           {/* <RefUse /> */}
-          <Imperative />
+          {/* <Imperative /> */}
+          <LoginForm />
+          <PostForm />
           {/* <A /> */}
         </ErrorBoundary>
       </div>

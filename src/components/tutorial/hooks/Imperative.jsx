@@ -1,8 +1,9 @@
-import React, { useCallback, useEffect, useLayoutEffect, useMemo, useReducer, useRef, useState } from "react";
+import React, { useCallback, useDebugValue, useEffect, useLayoutEffect, useMemo, useReducer, useRef, useState } from "react";
 import PropTypes from "prop-types";
 import { Button } from "react-bootstrap";
 import ImperativeChild from "./ImperativeChild";
 import useLogger from "./useLogger";
+import useLocalStorage from "./useLocalStorage";
 const initialState = {
     count: 0,
     countTwo: 0,
@@ -27,9 +28,10 @@ const Imperative = (props) => {
     const [state, dispatch] = useReducer(pureReducer, initialState);
     const [countOne, setCountOne] = useState(0);
     const [countThree, setCountThree] = useState(0);
-    const [title, setTitle] = useState('Uma Shankar');
+    const [title, setTitle] = useLocalStorage('name', '')//useState('Uma Shankar');
     const count = state.count;
     const countTwo = state.countTwo;
+    useDebugValue(title)
     useLogger(title);
     const getItems = useCallback((num) => {
         console.log(countThree + num, countThree - num)
@@ -73,12 +75,11 @@ const Imperative = (props) => {
                 -
             </Button>
             <br />
-
             <ImperativeChild getItems={getItems} ref={ref} /><br />
             <Button variant="danger" onClick={() => ref.current.increment()}>Parent click Increment </Button>
             <br /><br /><br />
             <input type="text" value={title} name="title" onChange={(e) => setTitle(e.target.value)} />
-        </div >
+        </div>
     );
 };
 
