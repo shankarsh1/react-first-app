@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router";
 import Expenses from "./Expenses";
 import NewExpense from "./NewExpenses/NewExpense";
 function Index() {
@@ -9,6 +10,8 @@ function Index() {
     { id: 4, title: "product4", amount: 400, created_at: "" },
     { id: 4, title: "product4", amount: 400, created_at: "" },
   ];
+  const location = useLocation()
+  console.log(location)
   const [expenseItems, setItems] = useState(expenses);
   function addExpenseHandler(expenseItem) {
     //console.log(expenseItem);
@@ -17,6 +20,8 @@ function Index() {
   }
   return (
     <>
+      {location.pathname}
+      {location.state ? location.state.name : ''}
       <NewExpense onAddExpense={addExpenseHandler}></NewExpense>
       <Expenses items={expenseItems} />
     </>

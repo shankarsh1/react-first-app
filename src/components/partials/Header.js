@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import { Link } from "react-router-dom";
+import { Link, NavLink, Outlet } from "react-router-dom";
 function Header(props) {
   /* var isActive = this.context.router.route.location.pathname === this.props.to;
   var className = isActive ? "active" : ""; */
@@ -9,9 +9,9 @@ function Header(props) {
     <React.Fragment>
       <header>
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
-          <Link className="navbar-brand" to="/">
+          <NavLink style={({ isActive }) => { return { color: isActive ? 'red' : '' } }} className="navbar-brand" to="/">
             Home
-          </Link>
+          </NavLink>
           <button
             className="navbar-toggler"
             type="button"
@@ -27,15 +27,26 @@ function Header(props) {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mr-auto">
               <li className="nav-item">
-                <Link className="nav-link" to="tutorial">
+                <NavLink style={({ isActive }) => { return { color: isActive ? 'red' : '' } }} className="nav-link" to="/tutorial">
                   Tutorials
-                </Link>
+                </NavLink>
               </li>
-              <li className="nav-item active">
-                <Link className="nav-link" to="expenses">
+              <li className="nav-item">
+                <NavLink style={({ isActive }) => { return { color: isActive ? 'red' : '' } }} className="nav-link" to="/admin/tutorial/010">
+                  nested Tutorials
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink style={({ isActive }) => { return { color: isActive ? 'red' : '' } }} className="nav-link" to="/expenses" state={{ name: 'uma Shankar' }}>
                   {props.title} <span className="sr-only"> {props.title}</span>
-                </Link>
+                </NavLink>
               </li>
+              <li className="nav-item">
+                <NavLink style={({ isActive }) => { return { color: isActive ? 'red' : '' } }} className="nav-link" to="/contact" state={{ name: 'uma Shankar' }}>
+                  Contact
+                </NavLink>
+              </li>
+
               <li className="nav-item dropdown">
                 <a
                   className="nav-link dropdown-toggle"
@@ -88,6 +99,7 @@ function Header(props) {
             </form>
           </div>
         </nav>
+        <Outlet />
       </header>
       {/* <header>
                 <nav className="navbar navbar-expand-md navbar-dark fixed-top bg-dark">

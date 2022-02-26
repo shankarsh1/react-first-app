@@ -19,12 +19,18 @@ import Toggle from "./Toggle";
 import HocCounter from "./HocCounter";
 import ContextA from "./ContextA";
 import { IndexHook } from "./hooks/IndexHook";
+import { useNavigate, useParams } from "react-router";
+import { Button } from "react-bootstrap";
+
 function TutorialIndex() {
+  const params = useParams()
+  const navigate = useNavigate();
   return (
     <React.Fragment>
       <div className="container">
         <h2 style={{ textAlign: "center" }}>
-          Advanced Tutorial On Final Stage
+          Advanced Tutorial On Final Stage {params.id}
+          <Button variant="success" onClick={() => { navigate('/expenses', { state: { name: 'Uma Shankar' } }) }}>Go expense</Button>
         </h2>
         {/* <ErrorExample /> */}
         {/* <UseStateBasics /> */}

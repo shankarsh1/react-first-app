@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import ErrorBoundary from "../ErrorBoundary";
 import A from "./A";
 import Callback from "./Callback";
+import FetchHook from "./FetchHook";
 import Imperative from "./Imperative";
 import Index from "./Index";
 import { LoginForm } from "./LoginForm";
@@ -22,9 +23,10 @@ export const IndexHook = () => {
           {/* <Callback /> */}
           {/* <RefUse /> */}
           {/* <Imperative /> */}
-          <LoginForm />
-          <PostForm />
+          {/* <LoginForm /> */}
+          {/* <PostForm /> */}
           {/* <A /> */}
+          <FetchHook />
         </ErrorBoundary>
       </div>
     </>
