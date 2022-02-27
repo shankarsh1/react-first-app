@@ -1,16 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-Sidebar.propTypes = {
+About.propTypes = {
 
 };
 
-function Sidebar(props) {
+function About(props) {
     return (
         <div>
-            Sidebar Left Menu
+            About Us
         </div>
     );
 }
 
-export default Sidebar;
+export default About;

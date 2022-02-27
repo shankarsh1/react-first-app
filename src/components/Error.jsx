@@ -1,16 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-Sidebar.propTypes = {
+Error.propTypes = {
 
 };
 
-function Sidebar(props) {
+function Error(props) {
     return (
         <div>
-            Sidebar Left Menu
+            Page Not Found
         </div>
     );
 }
 
-export default Sidebar;
+export default Error;

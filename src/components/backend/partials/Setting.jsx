@@ -1,16 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-Sidebar.propTypes = {
+Setting.propTypes = {
 
 };
 
-function Sidebar(props) {
+function Setting(props) {
     return (
         <div>
-            Sidebar Left Menu
+            Backend Setting
         </div>
     );
 }
 
-export default Sidebar;
+export default Setting;

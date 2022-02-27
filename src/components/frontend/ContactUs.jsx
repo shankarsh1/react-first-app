@@ -1,16 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-Sidebar.propTypes = {
+ContactUs.propTypes = {
 
 };
 
-function Sidebar(props) {
+function ContactUs(props) {
     return (
         <div>
-            Sidebar Left Menu
+            ContactUs
         </div>
     );
 }
 
-export default Sidebar;
+export default ContactUs;

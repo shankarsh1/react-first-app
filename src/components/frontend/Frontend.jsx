@@ -1,16 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
-Sidebar.propTypes = {
+Frontend.propTypes = {
 
 };
 
-function Sidebar(props) {
+function Frontend(props) {
     return (
         <div>
-            Sidebar Left Menu
+            Frontend dashboard Layout
         </div>
     );
 }
 
-export default Sidebar;
+export default Frontend;
