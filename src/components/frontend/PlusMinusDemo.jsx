@@ -33,9 +33,10 @@ class PlusMinusDemo extends Component {
 
                         <PlusMinusMemo data={this.state.data} />
                     </> : <>
-                        <Button variant='success' onClick={() => this.props.decrement(1)}>-Decrement</Button>
-                        <span>&nbsp;{this.props.redCount}&nbsp;</span>
-                        <Button variant='primary' onClick={() => this.props.increment(2)}>+Increment</Button>
+                        <Button variant='success' onClick={() => this.props.decrement(1, this.props.res[0] - 1)}>-Decrement</Button>
+                        <span>&nbsp;{this.props.res[0]}&nbsp;</span>
+                        <Button variant='primary' onClick={() => this.props.increment(2, this.props.res[0] + 1)}>+Increment</Button>
+                        <div style={{ textColor: 'red' }}>{this.props.res[1]}</div>
                     </>
                 }
             </>
@@ -51,7 +52,7 @@ const mapDispatchToProps = (dispatch => {
 
 const mapStateToProps = (state => {
     return {
-        redCount: state.changeCount
+        res: state.changeCount
     }
 })
 PlusMinusDemo.propTypes = {

@@ -6,13 +6,17 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
-import store from './Store'
+import store, { persister } from './Store'
 import { Provider } from "react-redux";
+import { PersistGate } from "redux-persist/integration/react";
+
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <Provider store={store}>
-        <App />
+        <PersistGate persistor={persister}>
+          <App />
+        </PersistGate>
       </Provider>
     </BrowserRouter>
   </React.StrictMode>,

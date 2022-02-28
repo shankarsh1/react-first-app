@@ -21,7 +21,8 @@ function PlusMinus(props) {
         return countOne % 2 === 0
     }, [countOne])
     const dispatch = useDispatch()
-    const redCount = useSelector((state) => state.changeCount)
+    const res = useSelector((state) => state.changeCount)
+    console.log(res)
     return (
         <>
             PlusMinus function Layout<br />
@@ -36,9 +37,10 @@ function PlusMinus(props) {
                     <Button variant='primary' onClick={() => setCountTwo(countTwo + 1)}>{countTwo} Increment Two</Button>
                     <PlusMinusMemo data={data} />
                 </> : <>
-                    <Button variant='success' onClick={() => dispatch(decrement(1))}>-Decrement</Button>
-                    <span>&nbsp;{redCount}&nbsp;</span>
-                    <Button variant='primary' onClick={() => dispatch(increment(2))}>+Increment</Button>
+                    <Button variant='success' onClick={() => dispatch(decrement(1, res[0] - 1))}>-Decrement</Button>
+                    <span>&nbsp;{res[0]}&nbsp;</span>
+                    <Button variant='primary' onClick={() => dispatch(increment(2, res[0] + 1))}>+Increment</Button>
+                    <div style={{ textColor: 'red' }}>{res[1]}</div>
                 </>
             }
 
