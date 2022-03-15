@@ -4,10 +4,10 @@ import React, { useState, useEffect } from 'react';
 // second argument
 
 const UseEffectCleanup = () => {
-  const [size, setSize] = useState(window.innerWidth);
+  const [size, setSize] = useState({ width: window.innerWidth, height: window.innerHeight });
 
   const checkSize = () => {
-    setSize(window.innerWidth);
+    setSize({ width: window.innerWidth, height: window.innerHeight });
   };
 
   useEffect(() => {
@@ -22,7 +22,7 @@ const UseEffectCleanup = () => {
   return (
     <>
       <h1>window</h1>
-      <h2>{size} PX</h2>
+      <h2>{size.width}px, {size.height}px</h2>
     </>
   );
 };

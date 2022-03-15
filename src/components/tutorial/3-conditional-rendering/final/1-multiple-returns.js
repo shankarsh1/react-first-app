@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
-const url = 'https://api.github.com/users/QuincyLarson';
+const url = 'https://api.github.com/users';
 const MultipleReturns = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
   const [user, setUser] = useState('default user');
+  const [users, setUsers] = useState([]);
 
   useEffect(() => {
     fetch(url)
@@ -17,8 +18,9 @@ const MultipleReturns = () => {
         }
       })
       .then((user) => {
-        const { login } = user;
+        const { login } = user[0];
         setUser(login);
+        setUsers(user);
         setIsLoading(false);
       })
       .catch((error) => console.log(error));
@@ -40,7 +42,13 @@ const MultipleReturns = () => {
   }
   return (
     <div>
-      <h1>{user}</h1>
+      {/*  <h1>{user}</h1> */}
+      {users.map((user, indexKey) => {
+        const { id, login, avatar_url, html_url } = user;
+        return (
+          <li key={id}>{login} {id}</li>
+        )
+      })}
     </div>
   );
 };

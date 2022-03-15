@@ -19,13 +19,14 @@ const Item = () => {
   };
   useEffect(() => {
     window.addEventListener('resize', checkSize);
+    console.log('resize');
     return () => {
       window.removeEventListener('resize', checkSize);
     };
   }, []);
 
   return (
-    <div style={{ marginTop: '2rem' }}>
+    <div style={{ marginTop: '5rem' }}>
       <h1>Window</h1>
       <h2>size : {size}</h2>
     </div>

@@ -4,8 +4,13 @@ import UseStateBasics from "../tutorial/1-useState/setup/2-useState-basics";
 import UseStateArray from "../tutorial/1-useState/setup/3-useState-array";
 import UseStateObject from "../tutorial/1-useState/setup/4-useState-object";
 import UseStateCounter from "../tutorial/1-useState/setup/5-useState-counter";
+import UseEffectBasics from "../tutorial/2-useEffect/final/1-useEffect-basics";
+import UseEffectCleanup from "../tutorial/2-useEffect/final/2-useEffect-cleanup";
+import UseEffectFetchData from "../tutorial/2-useEffect/final/3-useEffect-fetch-data";
+import Index from "../tutorial/6-useReducer/final/index";
 import ContactClassForm from "./ContactClassForm";
 import ContactForm from "./ContactForm";
+import RefComponent from "./RefComponent";
 import ErrorBoundary from "./ErrorBoundary";
 import HigherOrder from "./HigherOrder";
 import Layout from "./Layout";
@@ -14,21 +19,26 @@ import MountingA from "./MountingA";
 import Parent from "./Parent";
 import RefParent from "./RefParent";
 import RandomUser from "./RandomUser";
-import RefComponent from "./RefComponent";
+/* import RefComponent from "./RefComponent"; */
 import Toggle from "./Toggle";
 import HocCounter from "./HocCounter";
 import ContextA from "./ContextA";
 import { IndexHook } from "./hooks/IndexHook";
 import { useNavigate, useParams } from "react-router";
 import { Button } from "react-bootstrap";
+import MultipleReturns from "./3-conditional-rendering/final/1-multiple-returns";
+import ShortCircuit from "./3-conditional-rendering/final/2-short-circuit";
+import ShowHide from "./3-conditional-rendering/final/3-show-hide";
+/* import ControlledInputs from "./4-forms/final/1-controlled-inputs"; */
+import ControlledInputs from "./4-forms/final/2-multiple-inputs";
 
 function TutorialIndex() {
   const params = useParams()
   const navigate = useNavigate();
   return (
     <React.Fragment>
-      <div className="container">
-        <h2 style={{ textAlign: "center" }}>
+      <div className="container" style={{ textAlign: "center" }}>
+        <h2 >
           Advanced Tutorial On Final Stage {params.id}
           <Button variant="success" onClick={() => { navigate('/expenses', { state: { name: 'Uma Shankar' } }) }}>Go expense</Button>
         </h2>
@@ -37,7 +47,16 @@ function TutorialIndex() {
         {/* <UseStateArray /> */}
         {/* <UseStateObject/> */}
         {/* <UseStateCounter/> */}
-
+        {/* <UseEffectBasics /> */}
+        {/* <UseEffectCleanup /> */}
+        {/* <UseEffectFetchData /> */}
+        {/* <MultipleReturns /> */}
+        {/* <ShortCircuit /> */}
+        {/* <ShowHide /> */}
+        {/*  <ControlledInputs /> */}
+        <Index />
+        {/* <UseRefBasics /> */}
+        {/* <UseRefBasics /> */}
         {/* <Toggle/> */}
         {/*  <ContactForm /> */}
         {/*  <ContactClassForm /> */}
@@ -55,7 +74,7 @@ function TutorialIndex() {
           {/* <RefParent /> */}
           {/* <HocCounter /> */}
           {/* <ContextA /> */}
-          <IndexHook />
+          {/* <IndexHook /> */}
         </ErrorBoundary>
       </div>
     </React.Fragment>

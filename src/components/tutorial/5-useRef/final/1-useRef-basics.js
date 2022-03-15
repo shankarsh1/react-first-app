@@ -14,6 +14,7 @@ const UseRefBasics = () => {
   useEffect(() => {
     console.log(refContainer.current);
     refContainer.current.focus();
+    refContainer.current.style = "background-color:pink;color:red";
   });
 
   return (

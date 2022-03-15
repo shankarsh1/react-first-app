@@ -14,7 +14,7 @@ import Error from "./components/Error";
 import { FrontendHeader, FrontendHome, FrontendAbout, ContactUs } from "./components/frontend/Index";
 const LazyFrontendDashboard = React.lazy(() => import("./components/frontend/Dashboard"))
 function App() {
-  const [data, setDate] = useState({ isTutorial: false })
+  const [data, setDate] = useState({ isTutorial: true })
   return (
     <React.Fragment>
       {

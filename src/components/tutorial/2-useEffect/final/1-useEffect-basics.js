@@ -9,13 +9,13 @@ const UseEffectBasics = () => {
     if (value > 0) {
       document.title = `New Messages(${value})`;
     }
-  });
+  }, []);
 
   console.log('render component');
   return (
     <>
       <h1>{value}</h1>
-      <button className='btn' onClick={() => setValue(value + 1)}>
+      <button className='btn btn-success' onClick={() => setValue(value + 1)}>
         click me
       </button>
     </>
