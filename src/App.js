@@ -12,9 +12,12 @@ import Contact from "./components/partials/Contact";
 import { Backend, BackendHome, BackendSetting } from "./components/backend/Index";
 import Error from "./components/Error";
 import { FrontendHeader, FrontendHome, FrontendAbout, ContactUs } from "./components/frontend/Index";
+import AxiosApi from "./interceptors/AxiosApi";
 const LazyFrontendDashboard = React.lazy(() => import("./components/frontend/Dashboard"))
 function App() {
   const [data, setDate] = useState({ isTutorial: true })
+  AxiosApi.post('app-version', { user_id: 'D3abI9e7xncX3uySmI/grghYL2ZP6OLjI1ZDCN5DaHM' }).then(response => console.log(response.data))
+    .catch(error => console.log(error));
   return (
     <React.Fragment>
       {
